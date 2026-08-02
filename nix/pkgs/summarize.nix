@@ -15,17 +15,17 @@
 
 let
   pname = "summarize";
-  version = "0.21.7";
+  version = "0.21.8";
   binSources = {
     "aarch64-darwin" = {
-      url = "https://github.com/steipete/summarize/releases/download/v0.21.7/summarize-macos-arm64-v0.21.7.tar.gz";
-      hash = "sha256-k99lUr8xdpNPn5aHjzh9KFEJJIL5sG1HKV6zGZrpw24=";
+      url = "https://github.com/steipete/summarize/releases/download/v0.21.8/summarize-macos-arm64-v0.21.8.tar.gz";
+      hash = "sha256-zBrNQhCFtF3REY19YFfGAhtNbhNyB0d5xVyaZXy0if8=";
     };
   };
 
   src = fetchurl {
     url = "https://github.com/steipete/summarize/archive/refs/tags/v${version}.tar.gz";
-    hash = "sha256-+gWtCaQ5HUGlpW8kREzXpoauKr5qsHtkZDru6Y2i8tM=";
+    hash = "sha256-y4KNFzRWyne0j2dxrDnHcD7scwVqjVCceob+FuMoHq0=";
   };
 
   pnpmFetchDepsPkg = pkgs.callPackage "${pkgs.path}/pkgs/build-support/node/fetch-pnpm-deps" {
@@ -36,7 +36,7 @@ let
     pname = pname;
     version = version;
     src = src;
-    hash = "sha256-Pgy3iMXDLovkIfUMB9bzRGPjuZV2m1D86NQxlPzwFJo=";
+    hash = "sha256-EGzR2+90IrfdS1mWtQgoVeWE+NIrHPO0lM04rHvYowQ=";
     fetcherVersion = 3;
   });
 
